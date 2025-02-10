@@ -1,10 +1,10 @@
 :root {
-    --icon-lg-size: 100px;
+    --icon-lg-size: 140px;
     --icon-sm-size: 50px;
     --icon-border-radius: 50%;
     --grid-gap: 20px;
-    --area-width: 1000px;
-    --area-height: 400px;
+    --area-width: 1200px;
+    --area-height: 600px;
     --card-inner-margin: 10px;
     --dark-primary: #1d3557;
     --mid-primary: #457b9d;
@@ -18,10 +18,27 @@ body {
     color: var(--lightest-primary);
     background: var(--dark-primary);
     padding: 0 60px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* text-align: center; */
+}
+
+h1 {
+    font-size: 55px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 45px;
+    letter-spacing: -1px;
+    margin: 0;
+    margin-top: var(--card-inner-margin);
+}
+
+h3 {
+    font-size: 30px;
+    margin: 0;
+    margin-top: var(--card-inner-margin);
 }
 
 .container {
@@ -41,7 +58,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 20px; */
 }
 
 .card:hover {
@@ -77,77 +93,63 @@ body {
 }
 
 #sun-icon {
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+    background: radial-gradient(circle at 50% 50%, #FFFF00 50%, #d0534e 100%);
 }
 
 #mercury-icon {
     width: calc(var(--icon-sm-size) * .33);
     height: calc(var(--icon-sm-size) * .33);
-    background: radial-gradient(circle at 50% 50%, #d5d5d8 50%, #4c4c57 100%);
+    background: linear-gradient(#d5d5d8, #4c4c57, #d5d5d8);
+    border: 1px solid #4c4c57;
 }
 
 #venus-icon {
     width: calc(var(--icon-sm-size) * .95);
     height: calc(var(--icon-sm-size) * .95);
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+    background: linear-gradient(#e39e1c, #e7d520, #e39e1c);
+    border: 1px solid #a57c1b;
 }
 
 #earth-icon {
     width: var(--icon-sm-size);
     height: var(--icon-sm-size);
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+    background: linear-gradient(#6b93d6, #9fc164, #6b93d6);
+    border: 1px solid #6b93d6;
 }
 
 #mars-icon {
     width: calc(var(--icon-sm-size) * .5);
     height: calc(var(--icon-sm-size) * .5);
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+    background: linear-gradient(#c1440e, #fda600, #c1440e);
+    border: 1px solid #451804;
 }
 
 /* I wanted to make the planets the exact scale compared to earth,
 but some of them would be way too big for the cards */
 #jupiter-icon {
-    width: calc(var(--icon-sm-size) * 2.2);
-    height: calc(var(--icon-sm-size) * 2.2);
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+    width: calc(var(--icon-sm-size) * 1.4);
+    height: calc(var(--icon-sm-size) * 1.4);
+    background: linear-gradient(#e3dccb, #ebf3f6, #c99039, #ebf3f6, #c99039, #e3dccb);
+    border: 1px solid #a59186;
 }
 
 #saturn-icon {
-    width: calc(var(--icon-sm-size) * 1.8);
-    height: calc(var(--icon-sm-size) * 1.8);
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+    width: calc(var(--icon-sm-size) * 1.4);
+    height: calc(var(--icon-sm-size) * 1.4);
+    background: linear-gradient(#bfbdaf, #ead6b8, #ceb8b8, #bfbdaf);
+    border: 1px solid #ceb8b8;
 }
 
 #uranus-icon {
-    width: calc(var(--icon-sm-size) * 1.5);
-    height: calc(var(--icon-sm-size) * 1.5);
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+    width: calc(var(--icon-sm-size) * 1.3);
+    height: calc(var(--icon-sm-size) * 1.3);
+    background: radial-gradient(circle at 50% 50%, #ACE5EE 50%, #4296dc 100%);
+    border: 1px solid #2e84ce;
 }
 
 #neptune-icon {
-    width: calc(var(--icon-sm-size) * 1.5);
-    height: calc(var(--icon-sm-size) * 1.5);
-    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
-}
-
-h1 {
-    font-size: 50px;
-    letter-spacing: -2px;
-}
-
-h2 {
-    font-size: 40px;
-    letter-spacing: -1px;
-    margin: 0;
-    margin-top: var(--card-inner-margin);
-}
-
-h3 {
-    font-size: 25px;
-    margin: 0;
-    margin-top: var(--card-inner-margin);
-}
-
-img.about {
-    opacity: 0.5;
+    width: calc(var(--icon-sm-size) * 1.3);
+    height: calc(var(--icon-sm-size) * 1.3);
+    background: radial-gradient(circle at 50% 50%, #85addb 50%, #274687 100%);
+    border: 1px solid #274687;
 }
