@@ -1,48 +1,151 @@
+:root {
+    --icon-lg-size: 100px;
+    --icon-sm-size: 50px;
+    --icon-border-radius: 50%;
+    --grid-gap: 20px;
+    --area-width: 1000px;
+    --area-height: 400px;
+    --card-inner-margin: 10px;
+    --dark-primary: #1d3557;
+    --mid-primary: #457b9d;
+    --light-primary: #a8dadc;
+    --lightest-primary: #f1faee;
+    --accent: #e63946;
+}
+
 body {
     font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
-    text-align: center;
-}
-
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
+    color: var(--lightest-primary);
+    background: var(--dark-primary);
+    padding: 0 60px;
     display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: center; */
 }
 
-nav ul li {
-    list-style-type: none;
-    margin: 0;
+.container {
+    display: grid;
+    column-gap: var(--grid-gap);
+    row-gap: var(--grid-gap);
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    height: var(--area-height);
+    width: var(--area-width);
 }
 
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
+.card {
+    background-color: var(--light-primary);
+    color: var(--dark-primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+}
+
+.card:hover {
+    background-color: var(--lightest-primary);
+}
+
+.card.lg {
+    grid-template-columns: 2fr;
+    grid-row: span 2;
+    font-size: 20px;
+}
+
+.card.sm {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    font-size: 16px;
+}
+
+.icon {
+    border-radius: var(--icon-border-radius);
+}
+
+.card.lg>.icon {
+    width: var(--icon-lg-size);
+    height: var(--icon-lg-size);
+    background-color: black;
+}
+
+.card.sm>.icon {
+    width: var(--icon-sm-size);
+    height: var(--icon-sm-size);
+    background-color: black;
+}
+
+#sun-icon {
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+}
+
+#mercury-icon {
+    width: calc(var(--icon-sm-size) * .33);
+    height: calc(var(--icon-sm-size) * .33);
+    background: radial-gradient(circle at 50% 50%, #d5d5d8 50%, #4c4c57 100%);
+}
+
+#venus-icon {
+    width: calc(var(--icon-sm-size) * .95);
+    height: calc(var(--icon-sm-size) * .95);
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+}
+
+#earth-icon {
+    width: var(--icon-sm-size);
+    height: var(--icon-sm-size);
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+}
+
+#mars-icon {
+    width: calc(var(--icon-sm-size) * .5);
+    height: calc(var(--icon-sm-size) * .5);
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+}
+
+/* I wanted to make the planets the exact scale compared to earth,
+but some of them would be way too big for the cards */
+#jupiter-icon {
+    width: calc(var(--icon-sm-size) * 2.2);
+    height: calc(var(--icon-sm-size) * 2.2);
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+}
+
+#saturn-icon {
+    width: calc(var(--icon-sm-size) * 1.8);
+    height: calc(var(--icon-sm-size) * 1.8);
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+}
+
+#uranus-icon {
+    width: calc(var(--icon-sm-size) * 1.5);
+    height: calc(var(--icon-sm-size) * 1.5);
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
+}
+
+#neptune-icon {
+    width: calc(var(--icon-sm-size) * 1.5);
+    height: calc(var(--icon-sm-size) * 1.5);
+    background: radial-gradient(circle at 50% 50%, #e1a81d 50%, #d0534e 100%);
 }
 
 h1 {
-    font-size: 8em;
+    font-size: 50px;
     letter-spacing: -2px;
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin: 0;
+    margin-top: var(--card-inner-margin);
+}
+
+h3 {
+    font-size: 25px;
+    margin: 0;
+    margin-top: var(--card-inner-margin);
 }
 
 img.about {

@@ -1,7 +1,22 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Planetary Playing Cards
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1 class="headline">Planetary Playing Cards</h1>
+<div class="container">
+    {% card 'Sun' 'Type G2V' 'lg' %}
+    {% card 'Mercury' '0.387 AU' 'sm' %}
+    {% card 'Venus' '0.72 AU' 'sm' %}
+    {% card 'Earth' '1.0 AU' 'sm' %}
+    {% card 'Mars' '1.5 AU' 'sm' %}
+    {% card 'Jupiter' '5.2 AU' 'sm' %}
+    {% card 'Saturn' '9.5 AU' 'sm' %}
+    {% card 'Uranus' '19 AU' 'sm' %}
+    {% card 'Neptune' '30 AU' 'sm' %}
+</div>
+
+<script>
+    ScrollReveal().reveal('.card');
+    ScrollReveal().reveal('.headline');
+</script>
